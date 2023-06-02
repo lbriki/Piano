@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+nav {
+  min-height: 10vh;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+nav img {
+  width: 20%;
+  height: 10%;
+  object-fit: cover;
+}
+
+.piano-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+}
+.piano {
+  display: flex;
+  width: 80%;
+  padding: 1rem;
+}
+
+.key {
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+
+.white {
+  height: 20rem;
+  background-color: white;
+  border: 1px solid #333;
+}
+
+.white.active {
+  background-color: rgb(196, 192, 192);
+}
+
+.black {
+  height: 50%;
+  width: 60%;
+  background-color: black;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.black.active {
+  background-color: rgb(70, 68, 68);
+}
+
+span {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10vh;
+  background-color: #0f2027;
+  color: white;
+}
+
+@media screen and (max-width: 1280px) {
+  span {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  span {
+    font-size: 1rem;
+  }
+  .white {
+    height: 15rem;
+  }
+  .piano {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .white {
+    height: 10rem;
+  }
+  span {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  span {
+    font-size: 0.5rem;
+  }
+  .key {
+    padding: 0;
+  }
+  .black {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .white {
+    height: 7rem;
+  }
+  .black {
+    width: 50%;
+  }
+  .key {
+    padding: 0;
+  }
+  .piano {
+    padding: 0.1rem;
+  }
+  span {
+    font-size: 0.5rem;
+  }
+  footer {
+    font-size: 0.5rem;
+  }
+}
